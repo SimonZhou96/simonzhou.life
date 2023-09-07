@@ -1,7 +1,11 @@
 "use client";
 import { PaperclipIcon } from "lucide-react";
 import { Navigation } from "../components/nav"
+
   export default function Resume() {
+    const path = require('path')
+    console.log('profile path,', path)
+    var imgPath = path.resolve('profile.jpeg')
     return (
       <div>
             <Navigation message={{}}/>
@@ -11,7 +15,7 @@ import { Navigation } from "../components/nav"
                     <div className="col-span-4 sm:col-span-3 duration-200">
                         <div className="bg-slate-800 rounded-lg p-6 shadow-xl">
                             <div className="flex flex-col items-center">
-                                <img src="https://randomuser.me/api/portraits/men/94.jpg" className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0">
+                                <img src={imgPath} className="w-auto h-auto max-w-xs bg-gray-300 mb-4 transition-all duration-300 rounded-lg blur-sm hover:blur-none">
 
                                 </img>
                                 <h1 className="text-white text-xl font-bold">Simon Zhou</h1>
@@ -49,7 +53,7 @@ import { Navigation } from "../components/nav"
                                 <p className="text-slate-400 my-2">
                                   抖音小游戏 - <span className="text-slate-400 italic">抖音小游戏留存与ROI激进追平</span>
                                 </p>
-                                <p className="mt-2">
+                                <span className="mt-2">
                                 <ul className="text-slate-400 justify-between text-xs list-disc">
                                   <li>
                                     整体目标：通过加强抖音小游戏内用户复访渗透 DAU，打平抖音小游戏长期投放 ROI与整体 DAU，其中五款 IAP 小游戏追平微信七日留存&倍率。
@@ -58,7 +62,7 @@ import { Navigation } from "../components/nav"
                                     整体负责：小游戏分发能力，对小游戏留存与复访负责，其中包括小游戏 Feed 异形卡能力、首页侧边栏引导能力、小游戏消息订阅能力等。
                                   </li>
                                 </ul>
-                                </p>
+                                </span>
                             </div>
                             <div className="mb-6">
                                 <div className="flex justify-between">
